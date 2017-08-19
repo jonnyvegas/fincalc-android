@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:layout_marginTop="56dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Auto Loan Information"
+            android:id="@+id/textView8"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Auto Loan Amount:"
+            android:id="@+id/textView9"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/edtLoanAmount"
+            android:layout_alignBottom="@+id/textView9"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/textView9"
+            android:layout_toEndOf="@+id/textView9"
+            android:hint="$"
+            android:gravity="right" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/edtPaymentAmount"
+            android:layout_below="@+id/edtLoanAmount"
+            android:layout_alignRight="@+id/edtLoanAmount"
+            android:layout_alignEnd="@+id/edtLoanAmount"
+            android:hint="Years"
+            android:gravity="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Term:"
+            android:id="@+id/textView10"
+            android:layout_alignBottom="@+id/edtPaymentAmount"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/edtRate"
+            android:layout_below="@+id/edtPaymentAmount"
+            android:layout_alignRight="@+id/edtPaymentAmount"
+            android:layout_alignEnd="@+id/edtPaymentAmount"
+            android:hint="%"
+            android:gravity="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Interest Rate:"
+            android:id="@+id/textView12"
+            android:layout_alignBottom="@+id/edtRate"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Monthly Payment: $"
+            android:id="@+id/textTimeToPayoff"
+            android:layout_below="@+id/edtRate"
+            android:layout_alignRight="@+id/edtRate"
+            android:layout_alignEnd="@+id/edtRate"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Total for Loan: $"
+            android:id="@+id/textTotalForLoan"
+            android:layout_below="@+id/textAmountTowardInterest"
+            android:layout_alignRight="@+id/textAmountTowardInterest"
+            android:layout_alignEnd="@+id/textAmountTowardInterest"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Total to Interest: $"
+            android:id="@+id/textTotalToInterest"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textTotalForLoan"
+            android:layout_alignRight="@+id/textTotalForLoan"
+            android:layout_alignEnd="@+id/textTotalForLoan" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:id="@+id/button7"
+            android:onClick="calculateLogic"
+            android:layout_below="@+id/textTotalToInterest"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:id="@+id/button8"
+            android:onClick="clearLogic"
+            android:layout_below="@+id/button7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Amount toward Principal: $"
+            android:id="@+id/textAmountTowardPrincipal"
+            android:layout_below="@+id/textTimeToPayoff"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Amount toward Interest: $"
+            android:id="@+id/textAmountTowardInterest"
+            android:layout_below="@+id/textAmountTowardPrincipal"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:id="@+id/button21"
+            android:onClick="sendInfo"
+            android:layout_below="@+id/textTotalToInterest"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/button29"
+            android:onClick="saveInfo"
+            android:layout_below="@+id/button21"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</ScrollView>

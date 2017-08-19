@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:layout_marginTop="56dp">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mycompany.fincalc.AutoLeaseCalc"
+    tools:showIn="@layout/activity_auto_lease_calc">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="MSRP:"
+        android:id="@+id/textView18"
+        android:layout_above="@+id/edtInterestRate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtMsrp"
+        android:layout_alignParentTop="true"
+        android:hint="$"
+        android:gravity="right"
+        android:layout_alignRight="@+id/textAmountToInterest"
+        android:layout_alignEnd="@+id/textAmountToInterest"
+        android:layout_alignLeft="@+id/edtTermOfLease"
+        android:layout_alignStart="@+id/edtTermOfLease" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Interest Rate:"
+        android:id="@+id/textView19"
+        android:layout_alignBottom="@+id/edtInterestRate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/edtInterestRate"
+        android:layout_below="@+id/edtMsrp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView20"
+        android:gravity="right"
+        android:hint="%"
+        android:layout_toRightOf="@+id/textView20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Term of Lease:"
+        android:id="@+id/textView20"
+        android:layout_below="@+id/textView19"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtTermOfLease"
+        android:layout_alignBottom="@+id/textView20"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView21"
+        android:gravity="right"
+        android:hint="Months"
+        android:layout_toRightOf="@+id/textView21" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Residual Value:"
+        android:id="@+id/textView21"
+        android:layout_below="@+id/textView20"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtResidualValue"
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_alignRight="@+id/edtTermOfLease"
+        android:layout_alignEnd="@+id/edtTermOfLease"
+        android:layout_toEndOf="@+id/textView21"
+        android:gravity="right"
+        android:hint="%"
+        android:layout_alignLeft="@+id/edtInvoicePrice"
+        android:layout_alignStart="@+id/edtInvoicePrice" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Monthly Payment: $"
+        android:id="@+id/textMonthlyPayment"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView22"
+        android:layout_alignRight="@+id/edtTermOfLease"
+        android:layout_alignEnd="@+id/edtTermOfLease" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Monthly Payment in CA: $"
+        android:id="@+id/textMonthlyPaymentInCa"
+        android:layout_below="@+id/textMonthlyPayment"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount to Principal: $"
+        android:id="@+id/textAmtToPrincipal"
+        android:layout_below="@+id/textMonthlyPaymentInCa"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/button11"
+        android:onClick="calculateLogic"
+        android:layout_below="@+id/textTotalForLease"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/button12"
+        android:onClick="clearLogic"
+        android:layout_above="@+id/button28"
+        android:layout_alignRight="@+id/textAmountToInterest"
+        android:layout_alignEnd="@+id/textAmountToInterest" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount to Interest: $"
+        android:id="@+id/textAmountToInterest"
+        android:layout_below="@+id/textAmtToPrincipal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Total for Lease: $"
+        android:id="@+id/textTotalForLease"
+        android:layout_below="@+id/textAmountToInterest"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Invoice Price:"
+        android:id="@+id/textView22"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView21"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtInvoicePrice"
+        android:layout_alignBottom="@+id/textView22"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="right"
+        android:hint="$"
+        android:layout_alignLeft="@+id/textMonthlyPayment"
+        android:layout_alignStart="@+id/textMonthlyPayment" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/button19"
+        android:onClick="sendInfo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button12"
+        android:layout_alignStart="@+id/button12" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button28"
+        android:onClick="saveInfo"
+        android:layout_below="@+id/button11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
+</ScrollView>
